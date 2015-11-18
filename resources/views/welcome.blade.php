@@ -56,7 +56,7 @@
 					</div>
 				</div>
 				<div class="item">
-					<img class="img-responsive" src="{{asset('images/slider/cc1.jpg')}}" alt="slider">						
+					<img class="img-responsive" src="{{asset('images/slider/cc2.jpg')}}" alt="slider">						
 					<div class="carousel-caption">
 						<h2>We don't remember days,we remember moments.</h2>
 						<h4>-Cesare Pavese</h4>
