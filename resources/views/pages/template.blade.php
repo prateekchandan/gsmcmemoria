@@ -35,7 +35,7 @@
     <footer id="footer">
         <div class="container">
             <div class="text-center">
-                <p> Copyright  &copy;2015<a target="_blank" href="#"> aavishkaar </a>. All Rights Reserved. <br> Designed by <a target="_blank" href="http://prateekchandan.in/">Prateek</a></p>                
+                <p> Copyright  &copy;2016<a target="_blank" href="#"> aavishkaar </a>. All Rights Reserved. <br> Designed by <a target="_blank" href="http://prateekchandan.in/">Prateek</a> &amp; sponsored by Dr Atul and Pooja Vadgaonkar, Nasik</p>                
             </div>
         </div>
     </footer>

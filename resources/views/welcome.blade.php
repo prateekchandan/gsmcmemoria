@@ -28,9 +28,9 @@
 		                <ul class="nav navbar-nav navbar-right">                 
 		                    <li class="scroll active"><a href="#home">Home</a></li>
 		                    <li class="scroll"><a href="#about">About</a></li>                     
-		                    <li class="scroll"><a href="#explore">Explore</a></li>                         
 		                    <li class="scroll"><a href="#event">Schedule</a></li>
 		                    <li><a class="no-scroll" href="{{route('register')}}">REGISTER</a></li>
+		                    <li><a class="no-scroll" href="#">Team</a></li>
 		                    <li class="scroll"><a href="#contact">Contact</a></li>       
 		                </ul>
 		            </div>
@@ -93,6 +93,103 @@
 		</div>
 	</section><!--/#about-->
 
+	<section id="twitter" style="color:#333">
+        <div class="container">
+        <style type="text/css">
+        .main .screenshot {
+		    float: left;
+		    margin: 10px;
+		    width: 300px;
+		}
+
+	
+        </style>
+        <div class="main">
+		  <img src="{{asset('images/dean.png')}}" class="screenshot" alt="Example" />
+		  <div class="details">
+		    <div class="about">
+		      <h2>From the Dean's Desk</h2>
+		      <div class="info">
+		      	Dear GSite,<br>
+		      	<p>
+		      		GSites from every nook and corner, from every part of the world, I welcome you back, with open arms to your Home –   <b>Seth G S Medical College and KEM Hospital</b>.
+		      	</p>
+		      	<p>
+		      		Perhaps, a part of us, our soul, is always left behind in these stone walls that sheltered us from the storms that life brings upon us. My fellow members of the medical fraternity, I ask you, I urge you, to come and connect once again, with this part of your soul. As our institution ages and treads towards the landmark of ninety years, let us come and pay respect to this giant, in the humblest of ways.
+		      	</p>
+		      	<p>
+		      		We, at these twin institutions, welcome you to  <b>‘MEMORIA – A Walk Down Memory Lane’</b>, an evening which will bring back to life moments that have settled under the dusts of years and nostalgia. Let us turn back the pages of the sepia-toned album, and unearth treasures of our lives well-spent in this very building.
+		      	</p>
+		      	<p>
+		      		I hope to see a great response from all those who have been a part of these living, breathing entities at some part. Come, once again to lie, in the lap of your alma mater, and come, to open your eyes to another time, another life.
+		      	</p>
+		      	<br>
+		      	<p>
+		      		Thanking You
+		      	</p>
+		      	<br>
+		      	<p>
+		      		<img src="{{asset('images/sign.png')}}" style="width:200px;box-shadow:0px 0px 10px #ccc;"><br>
+
+		      		Dr. Avinash N. Supe<br>Dean<br>Seth GSMC &amp; KEMH
+		      	</p>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+        </div>
+    </section>
+
+	<section id="event">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<div id="event-carousel" class="carousel slide" data-interval="false">
+						<h2 class="heading" style="margin-bottom:0px">Schedule</h2>
+						<p style="margin-bottom:20px">"Sometimes you will never know the true value of a moment until it becomes a memory". <br>
+						Memoria seeks to revive all those cherished memories of your college years that were spent in this glorious institution. ...and what better way to do it than with the very batchmates you made those memories with. The following is a tentative schedule of events on the programme day: 
+						</p>
+						<div class="carousel-inner">
+							<div class="item active">
+								<div class="row">
+									<div class="col-sm-3">
+										<div class="single-event">
+											<img class="img-responsive" src="{{asset('images/slider/cc1.jpg')}}" alt="event-image">
+											<h4>CAMPUS VISIT</h4>
+											<p>On the 24th of January, we shall keep the college and hospital gates open for all those who wish to walk through the hallways of these hallowed precincts once again. Escorted tours to various departments will be available from 3.00 PM until 5.00 PM. </p>
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<div class="single-event">
+											<img class="img-responsive" src="{{asset('images/event/event3.jpg')}}" alt="event-image">
+											<h4>FELICITATION</h4>
+											<p>Memoria promises to be a night of cheer and entertainment as we have an array of performances and events lined for the night.
+ 											The felicitation of our dear former Deans and senior alumni, who have witnessed this college's 90-year-old legacy will definitely be a moment of pride and poignancy. </p>
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<div class="single-event">
+											<img class="img-responsive" src="{{asset('images/event/event2.jpg')}}" alt="event-image">
+											<h4>REVIVAL OF ORGY</h4>
+											<p> musical extravaganza presented by a band that is very much a product of GS. This shall be followed by dances and other entertaining acts. </p>
+										</div>
+									</div>
+									<div class="col-sm-3">
+										<div class="single-event">
+											<img class="img-responsive" src="{{asset('images/event/dinner.jpg')}}" alt="event-image">
+											<h4>DINNER</h4>
+											<p> Last but certainly not the least, a delicious dinner to bring the night to a close, as you sit with old friends and recount all the indelible memories of college-life and make some new ones as well.</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+	</section><!--/#event-->
+
 	<section id="explore">
 		<div class="container">
 			<div class="row">
@@ -129,63 +226,6 @@
 		</div>
 	</section><!--/#explore-->
 
-	<section id="event">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 col-md-12">
-					<div id="event-carousel" class="carousel slide" data-interval="false">
-						<h2 class="heading" style="margin-bottom:0px">Schedule</h2>
-						<p style="margin-bottom:20px">"Sometimes you will never know the true value of a moment until it becomes a memory". <br>
-						Memoria seeks to revive all those cherished memories of your college years that were spent in this glorious institution. ...and what better way to do it than with the very batchmates you made those memories with. The following is a tentative schedule of events on the programme day: 
-						</p>
-						<a class="even-control-left" href="#event-carousel" data-slide="prev"><i class="fa fa-angle-left"></i></a>
-						<a class="even-control-right" href="#event-carousel" data-slide="next"><i class="fa fa-angle-right"></i></a>
-						<div class="carousel-inner">
-							<div class="item active">
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="single-event">
-											<img class="img-responsive" src="{{asset('images/slider/cc1.jpg')}}" alt="event-image">
-											<h4>CAMPUS VISIT</h4>
-											<p>On the 24th of January, we shall keep the college and hospital gates open for all those who wish to walk through the hallways of these hallowed precincts once again. Escorted tours to various departments will be available from 3.00 PM until 5.00 PM. </p>
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="single-event">
-											<img class="img-responsive" src="{{asset('images/event/event3.jpg')}}" alt="event-image">
-											<h4>FELICITATION</h4>
-											<p>Memoria promises to be a night of cheer and entertainment as we have an array of performances and events lined for the night.
- 											The felicitation of our dear former Deans and senior alumni, who have witnessed this college's 90-year-old legacy will definitely be a moment of pride and poignancy. </p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="item">
-								<div class="row">
-									<div class="col-sm-6">
-										<div class="single-event">
-											<img class="img-responsive" src="{{asset('images/event/event2.jpg')}}" alt="event-image">
-											<h4>REVIVAL OF ORGY</h4>
-											<p> musical extravaganza presented by a band that is very much a product of GS. This shall be followed by dances and other entertaining acts. </p>
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="single-event">
-											<img class="img-responsive" src="{{asset('images/event/dinner.jpg')}}" alt="event-image">
-											<h4>DINNER</h4>
-											<p> Last but certainly not the least, a delicious dinner to bring the night to a close, as you sit with old friends and recount all the indelible memories of college-life and make some new ones as well.</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>			
-		</div>
-	</section><!--/#event-->
-
-	
 
 
 	<section id="contact">
@@ -200,18 +240,18 @@
 						<div class="contact-text">
 							<h3>Contact</h3>
 							<address>
-								E-mail: promo@party.com<br>
-								Phone: +1 (123) 456 7890<br>
-								Fax: +1 (123) 456 7891
+								E-mail: aavishkaarfest@gmail.com<br>
+								Phone: +91 9987476602 / <br>
+								&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +91 9595955665
 							</address>
 						</div>
 						<div class="contact-address">
 							<h3>Contact</h3>
 							<address>
-								Unit C2, St.Vincent's Trading Est.,<br>
-								Feeder Road,<br>
-								Bristol, BS2 0UY<br>
-								United Kingdom
+								 Seth GS Medical College and KEM Hospital,<br>
+								Acharya Donde Marg,<br>
+								Parel, Mumbai, MH- 400012 <br>
+								INDIA
 							</address>
 						</div>
 					</div>
