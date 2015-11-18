@@ -13,6 +13,7 @@
 
 Route::get('/', array('as'=>'home','uses'=>'WelcomeController@index'));
 Route::get('register', array('as'=>'register','uses'=>'WelcomeController@show_register'));
+Route::get('team', array('as'=>'team','uses'=>'WelcomeController@show_team'));
 
 Route::get('home', 'HomeController@index');
 

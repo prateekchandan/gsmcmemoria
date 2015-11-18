@@ -39,4 +39,15 @@ class WelcomeController extends Controller {
 		return view('pages.register');
 	}
 
+	public function show_team()
+	{
+		$team = array('Ashnik Chauhan.jpg','Kingshuk Ganguly.JPG','Swastika Lamture.PNG','Ayush Shah.jpg','Niharika Sabnis.jpg','Vaibhavi Bhoir.JPG','Devanshi Shah.jpg','Renuka Ashtekar.JPG','Divya Srinivasan.jpg','Shraddha Parekh.jpg');
+		$names = array();
+		foreach ($team as $key => $value) {
+			$nm = explode('.', $value)[0];
+			array_push($names, $nm);
+		}
+		return view('pages.team',['pics'=>$team,'names'=>$names]);
+	}
+
 }
