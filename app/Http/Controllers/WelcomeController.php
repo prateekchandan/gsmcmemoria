@@ -33,4 +33,10 @@ class WelcomeController extends Controller {
 		return view('welcome');
 	}
 
+
+	public function show_register()
+	{
+		return view('pages.register');
+	}
+
 }
