@@ -29,13 +29,13 @@
 </head><!--/head-->
 
 <body>
-	
+
 	@yield('content')
 
     <footer id="footer">
         <div class="container">
             <div class="text-center">
-                <p> Copyright  &copy;2015<a target="_blank" href="#"> aavishkaar </a>Theme. All Rights Reserved. <br> Designed by <a target="_blank" href="http://prateekchandan.in/">Prateek</a></p>                
+                <p> Copyright  &copy;2015<a target="_blank" href="#"> aavishkaar </a>. All Rights Reserved. <br> Designed by <a target="_blank" href="http://prateekchandan.in/">Prateek</a></p>                
             </div>
         </div>
     </footer>
