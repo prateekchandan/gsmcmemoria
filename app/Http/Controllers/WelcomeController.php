@@ -39,6 +39,16 @@ class WelcomeController extends Controller {
 		return view('pages.register');
 	}
 
+	public function tnc()
+	{
+		return view('pages.tnc');
+	}
+
+	public function privacypolicy()
+	{
+		return view('pages.privacypolicy');
+	}
+
 	public function show_team()
 	{
 		$team = array('Ashnik Chauhan.jpg','Kingshuk Ganguly.JPG','Swastika Lamture.PNG','Ayush Shah.jpg','Niharika Sabnis.jpg','Vaibhavi Bhoir.JPG','Devanshi Shah.jpg','Renuka Ashtekar.JPG','Divya Srinivasan.jpg','Shraddha Parekh.jpg');
