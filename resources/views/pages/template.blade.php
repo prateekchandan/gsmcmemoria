@@ -37,6 +37,11 @@
             <div class="text-center">
                 <p> Copyright  &copy;2016<a target="_blank" href="#"> aavishkaar </a>. All Rights Reserved. <br> Designed by <a target="_blank" href="http://prateekchandan.in/">Prateek</a> &amp; sponsored by Dr Atul and Pooja Vadgaonkar, Nasik</p>                
             </div>
+            <div class="text-right">
+                <a href="{{route('privacypolicy')}}">Privacy Policy</a> |
+                <a href="{{route('tnc')}}">Terms and Condition</a> |
+                <a href="{{route('home')}}">Home</a>
+            </div>
         </div>
     </footer>
     <!--/#footer-->
