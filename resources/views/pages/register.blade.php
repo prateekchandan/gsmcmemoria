@@ -70,7 +70,7 @@
 			</div>	
 
 			<div class="row">
-				<div class="col-sm-6">
+				<div class="col-sm-6">{{--
 						<form class="form-horizontal">
 							<h3>PERSONAL DETAILS</h3>
 						  <div class="form-group">
@@ -190,6 +190,9 @@
 						    </div>
 						  </div>
 						</form>
+						--}}
+						<p><b>Registrations Opening Soon..</b></p>
+						<br><br>
 					</div>
 			</div>		
 		</div>

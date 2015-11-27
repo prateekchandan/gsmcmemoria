@@ -46,6 +46,10 @@
 			<ol class="carousel-indicators">
 				<li data-target="#main-slider" data-slide-to="0" class="active"></li>
 				<li data-target="#main-slider" data-slide-to="1"></li>
+				<li data-target="#main-slider" data-slide-to="2"></li>
+				<li data-target="#main-slider" data-slide-to="3"></li>
+				<li data-target="#main-slider" data-slide-to="4"></li>
+				<li data-target="#main-slider" data-slide-to="5"></li>
 			</ol>
 			<div class="carousel-inner">
 				<div class="item active">
@@ -57,6 +61,34 @@
 				</div>
 				<div class="item">
 					<img class="img-responsive" src="{{asset('images/slider/cc2.jpg')}}" alt="slider">						
+					<div class="carousel-caption">
+						<h2>We don't remember days,we remember moments.</h2>
+						<h4>-Cesare Pavese</h4>
+					</div>
+				</div>	
+				<div class="item">
+					<img class="img-responsive" src="{{asset('images/slider/cc3.jpg')}}" alt="slider">						
+					<div class="carousel-caption">
+						<h2>We don't remember days,we remember moments.</h2>
+						<h4>-Cesare Pavese</h4>
+					</div>
+				</div>	
+				<div class="item">
+					<img class="img-responsive" src="{{asset('images/slider/cc4.jpg')}}" alt="slider">						
+					<div class="carousel-caption">
+						<h2>We don't remember days,we remember moments.</h2>
+						<h4>-Cesare Pavese</h4>
+					</div>
+				</div>	
+				<div class="item">
+					<img class="img-responsive" src="{{asset('images/slider/cc5.jpg')}}" alt="slider">						
+					<div class="carousel-caption">
+						<h2>We don't remember days,we remember moments.</h2>
+						<h4>-Cesare Pavese</h4>
+					</div>
+				</div>	
+				<div class="item">
+					<img class="img-responsive" src="{{asset('images/slider/cc6.jpg')}}" alt="slider">						
 					<div class="carousel-caption">
 						<h2>We don't remember days,we remember moments.</h2>
 						<h4>-Cesare Pavese</h4>
