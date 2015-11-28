@@ -51,8 +51,8 @@ jQuery(function($) {'use strict',
 			type:"POST",
 			data:$(this).serialize(),
 			success:function(data){
-				console.log(data);
 				$('.contact-form').prev().text(data).fadeIn().delay(3000).fadeOut();
+				$('.contact-form')[0].reset();
 			},
 			error:function(data){
 				console.log(data);
