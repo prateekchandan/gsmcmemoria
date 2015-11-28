@@ -13,6 +13,9 @@
 
 Route::get('/', array('as'=>'home','uses'=>'WelcomeController@index'));
 Route::get('register', array('as'=>'register','uses'=>'WelcomeController@show_register'));
+Route::get('confirm', array('as'=>'confirm','uses'=>'WelcomeController@register_confirm'));
+Route::post('result', array('as'=>'result','uses'=>'WelcomeController@register_result'));
+Route::post('register', array('as'=>'register','uses'=>'WelcomeController@register'));
 Route::get('team', array('as'=>'team','uses'=>'WelcomeController@show_team'));
 Route::get('terms', array('as'=>'tnc','uses'=>'WelcomeController@tnc'));
 Route::get('privacy', array('as'=>'privacypolicy','uses'=>'WelcomeController@privacypolicy'));

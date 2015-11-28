@@ -54,5 +54,7 @@
     <script type="text/javascript" src="{{asset('js/jquery.scrollTo.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/jquery.nav.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/main.js')}}"></script>  
+
+    @yield('script')
 </body>
 </html>

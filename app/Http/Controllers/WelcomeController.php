@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
-
+use Input;
+use Razorpay\Api\Api;
 class WelcomeController extends Controller {
 
 	/*
@@ -36,7 +37,10 @@ class WelcomeController extends Controller {
 
 	public function show_register()
 	{
-		return view('pages.register');
+
+		$data = session('data',json_decode('{"error":1,"pg_dept":"","spouse_pg_dept":"","name": "","mobile": "","landline": "","email": "","r_address": "","r_state": "","r_country": "","r_zip": "", "h_address": "","h_state": "","h_country": "","h_zip": "","ug_college": "","ug_year": "","pg_college": "","pg_year": "","spouse_coming": "true","spouse_alumni":"false","spouse_name": "","spouse_h_address": "","spouse_h_state": "","spouse_h_country": "","spouse_h_zip": "","spouse_ug_college": "","spouse_ug_year": "","spouse_pg_college": "","spouse_pg_year": ""}',true));
+		//session(['data'=>json_decode('{"error":1,"pg_dept":"","spouse_pg_dept":"","name": "","mobile": "","landline": "","email": "","r_address": "","r_state": "","r_country": "","r_zip": "", "h_address": "","h_state": "","h_country": "","h_zip": "","ug_college": "","ug_year": "","pg_college": "","pg_year": "","spouse_coming": "true","spouse_alumni":"false","spouse_name": "","spouse_h_address": "","spouse_h_state": "","spouse_h_country": "","spouse_h_zip": "","spouse_ug_college": "","spouse_ug_year": "","spouse_pg_college": "","spouse_pg_year": ""}',true)]);
+		return view('pages.register',array('data'=>$data));
 	}
 
 	public function tnc()
@@ -58,6 +62,49 @@ class WelcomeController extends Controller {
 			array_push($names, $nm);
 		}
 		return view('pages.team',['pics'=>$team,'names'=>$names]);
+	}
+
+	public function register()
+	{
+		$data = Input::all();
+		if(array_key_exists('spouse_coming',$data))
+			$data['spouse_coming']="true";
+		else
+			$data['spouse_coming']="false";
+
+		if(array_key_exists('spouse_alumni',$data))
+			$data['spouse_alumni']="true";
+		else
+			$data['spouse_alumni']="false";
+
+		session(['data'=>$data]);
+		return redirect()->route('confirm');
+	}
+
+	public function register_confirm()
+	{
+		$data = session('data',json_decode('{"error":1,"pg_dept":"","spouse_pg_dept":"","name": "","mobile": "","landline": "","email": "","r_address": "","r_state": "","r_country": "","r_zip": "", "h_address": "","h_state": "","h_country": "","h_zip": "","ug_college": "","ug_year": "","pg_college": "","pg_year": "","spouse_coming": "true","spouse_alumni":"false","spouse_name": "","spouse_h_address": "","spouse_h_state": "","spouse_h_country": "","spouse_h_zip": "","spouse_ug_college": "","spouse_ug_year": "","spouse_pg_college": "","spouse_pg_year": ""}',true));
+		if(array_key_exists('error', $data))
+			return redirect()->route("register");
+
+		return view('pages.confirm',array('data'=>$data));
+	}
+
+	public function register_result()
+	{
+		$error = 0;
+		if(!Input::has("razorpay_payment_id"))
+		{
+			return redirect()->route('confirm');
+		}
+		$id = Input::get("razorpay_payment_id");
+		$api = new Api("rzp_test_C4BqVMbrkIGbL7","uzxtYS7Hy2XlBqIxwjKvzKbT");
+		$payment = $api->payment->fetch($id); // Returns a particular payment
+		$amount =  $payment->amount;
+		$currency = $payment->currency;
+		$id = $payment->id;
+		
+		return $id." ".$amount;
 	}
 
 }
