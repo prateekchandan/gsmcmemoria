@@ -372,8 +372,6 @@
 		$('.s_alumni').val('');
 	});
 
-	$( "#reg-form" ).slideToggle( "slow" );
-		$('#start-block').toggle("fast");
 
 
 </script>
