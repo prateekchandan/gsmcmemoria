@@ -1,6 +1,8 @@
 <?php namespace App\Http\Controllers;
 use Input;
 use Razorpay\Api\Api;
+use DB;
+use Mail;
 class WelcomeController extends Controller {
 
 	/*
@@ -92,7 +94,6 @@ class WelcomeController extends Controller {
 
 	public function register_result()
 	{
-		$error = 0;
 		if(!Input::has("razorpay_payment_id"))
 		{
 			return redirect()->route('confirm');
@@ -100,11 +101,31 @@ class WelcomeController extends Controller {
 		$id = Input::get("razorpay_payment_id");
 		$api = new Api("rzp_test_C4BqVMbrkIGbL7","uzxtYS7Hy2XlBqIxwjKvzKbT");
 		$payment = $api->payment->fetch($id); // Returns a particular payment
-		$amount =  $payment->amount;
-		$currency = $payment->currency;
-		$id = $payment->id;
-		
-		return $id." ".$amount;
+		$data = session('data',json_decode('{"error":1,"pg_dept":"","spouse_pg_dept":"","name": "","mobile": "","landline": "","email": "","r_address": "","r_state": "","r_country": "","r_zip": "", "h_address": "","h_state": "","h_country": "","h_zip": "","ug_college": "","ug_year": "","pg_college": "","pg_year": "","spouse_coming": "true","spouse_alumni":"false","spouse_name": "","spouse_h_address": "","spouse_h_state": "","spouse_h_country": "","spouse_h_zip": "","spouse_ug_college": "","spouse_ug_year": "","spouse_pg_college": "","spouse_pg_year": ""}',true));
+		$data['id']=$payment->id;;
+		$data['amount']=$payment->amount;
+		unset($data['_token']);
+		if(is_null(DB::table('users')->where('id','=',$payment->id)->first()))
+		{
+			DB::table('users')->insert($data);
+		}
+		else{
+			DB::table('users')->where('id','=',$payment->id)->update($data);
+		}
+		$env = env('APP_ENV','local');
+		if($env != 'local'){
+			Mail::send('emails.confirm', $data,   function($message) use ($data){
+                $message->to($data['email'],$data['name'])->
+                replyTo("aavishkaarfest@gmail.com", "Kem Hospital")->
+                subject($subject);
+            });
+		}else{
+			Mail::pretend('emails.cofirm', $data,   function($message) use ($data){
+                $message->to($data['email'],$data['name'])->
+                replyTo("aavishkaarfest@gmail.com", "Kem Hospital")->
+                subject($subject);
+            });
+		}
 	}
 
 }
