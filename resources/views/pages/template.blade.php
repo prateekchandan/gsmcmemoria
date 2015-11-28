@@ -8,9 +8,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="'Memoria', an event hosted by the GOSUMEC Alumni Association and the Core Committee of Aavishkaar 2016, will refresh you with an amazing evening filled with nostalgia and joy. ">
+    <meta name="description" content="Seth GSMC and KEM Hospital cordially invites its alumni to celebrate its 90th anniversary on 24th January 2016. Come take a walk down the memory lane with your fellow GSites">
     <meta name="author" content="Prateek Chandan">
-    <title>Memoria</title>
+    <title>Memoria - Seth GSMC and KEM Hospital</title>
+    <link rel="author" href="https://plus.google.com/+PrateekChandan">
+
+    <meta property="og:title" content="Memoria - Seth GSMC and KEM Hospital"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:image" content="{{asset('images/fb.png')}}"/>
+    <meta property="og:url" content="http://www.gsmcmemoria.in"/>
+    <meta property="og:description" content="Seth GSMC and KEM Hospital cordially invites its alumni to celebrate its 90th anniversary on 24th January 2016. Come take a walk down the memory lane with your fellow GSites"/>
+    <meta property="fb:admins" content="100000708391263"/>
+
+
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/font-awesome.min.css')}}" rel="stylesheet">
 	<link href="{{asset('css/main.css')}}" rel="stylesheet">
