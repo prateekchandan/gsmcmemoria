@@ -11,7 +11,8 @@
 		"phpunit/phpunit": "~4.0",
 		"phpspec/phpspec": "~2.1",
 		"razorpay/razorpay": "1.*",
-		"barryvdh/laravel-dompdf": "0.6.*"
+		"barryvdh/laravel-dompdf": "0.6.*",
+		"maatwebsite/excel": "~2.0.0"
 	},
 	"autoload": {
 		"classmap": [

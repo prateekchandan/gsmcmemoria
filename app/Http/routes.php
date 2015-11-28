@@ -21,7 +21,8 @@ Route::get('team', array('as'=>'team','uses'=>'WelcomeController@show_team'));
 Route::get('terms', array('as'=>'tnc','uses'=>'WelcomeController@tnc'));
 Route::get('privacy', array('as'=>'privacypolicy','uses'=>'WelcomeController@privacypolicy'));
 
-Route::get('home', 'HomeController@index');
+Route::get('home', 'WelcomeController@index');
+Route::get('download', 'WelcomeController@download');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

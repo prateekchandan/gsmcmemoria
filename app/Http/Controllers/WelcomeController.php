@@ -5,6 +5,7 @@ use DB;
 use Mail;
 use PDF;
 use App;
+use Excel;
 class WelcomeController extends Controller {
 
 	/*
@@ -168,5 +169,34 @@ class WelcomeController extends Controller {
 		}
 
 		return 'Thank you for contact us. As early as possible  we will contact you ';
+	}
+
+	public function download()
+	{/*
+		Excel::create('All Registrations', function($excel) {
+
+		    $excel->sheet('Sheet1', function($sheet) {
+
+		        $sheet->setOrientation('landscape');
+		        $sheet->with();
+		    });
+
+		})->export('xls');*/
+		$res = DB::table('users')->get();
+		$data = array();
+		foreach ($res as $key => $value) {
+			//var_dump((array)$value);
+			$value->amount/=100;
+			array_push($data, (array)$value);
+		}
+		Excel::create('All Registrations', function($excel) use($data){
+
+		    $excel->sheet('Sheet1', function($sheet) use($data){
+
+		        $sheet->setOrientation('landscape');
+		        $sheet->with($data);
+		    });
+
+		})->export('xls');
 	}
 }
