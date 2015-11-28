@@ -113,14 +113,15 @@ class WelcomeController extends Controller {
 			DB::table('users')->where('id','=',$payment->id)->update($data);
 		}
 		$env = env('APP_ENV','local');
+		$subject = "Payment Confirmation of Memoria";
 		if($env != 'local'){
-			Mail::send('emails.confirm', $data,   function($message) use ($data){
+			Mail::send('emails.confirm', $data,   function($message) use ($data,$subject){
                 $message->to($data['email'],$data['name'])->
                 replyTo("aavishkaarfest@gmail.com", "Kem Hospital")->
                 subject($subject);
             });
 		}else{
-			Mail::pretend('emails.cofirm', $data,   function($message) use ($data){
+			Mail::pretend('emails.cofirm', $data,   function($message) use ($data,$subject){
                 $message->to($data['email'],$data['name'])->
                 replyTo("aavishkaarfest@gmail.com", "Kem Hospital")->
                 subject($subject);
