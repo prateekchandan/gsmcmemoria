@@ -3,6 +3,8 @@ use Input;
 use Razorpay\Api\Api;
 use DB;
 use Mail;
+use PDF;
+use App;
 class WelcomeController extends Controller {
 
 	/*
@@ -114,19 +116,33 @@ class WelcomeController extends Controller {
 		}
 		$env = env('APP_ENV','local');
 		$subject = "Payment Confirmation of Memoria";
+		
+
+		$html =  view('pages.invoice',$data);
+		$pdf = App::make('dompdf.wrapper');
+		$pdf->loadHTML($html);
+		$path =  public_path().'/invoice/'.$id.'.pdf';
+		$pdf->save($path);
+		$url = asset('invoice/'.$id.'.pdf');
+
 		if($env != 'local'){
-			Mail::send('emails.confirm', $data,   function($message) use ($data,$subject){
+			Mail::send('emails.confirm', $data,   function($message) use ($data,$subject,$path){
                 $message->to($data['email'],$data['name'])->
                 replyTo("aavishkaarfest@gmail.com", "Kem Hospital")->
                 subject($subject);
+                $message->attach($path, []);
             });
 		}else{
-			Mail::pretend('emails.cofirm', $data,   function($message) use ($data,$subject){
+			Mail::pretend('emails.cofirm', $data,   function($message) use ($data,$subject,$path){
                 $message->to($data['email'],$data['name'])->
                 replyTo("aavishkaarfest@gmail.com", "Kem Hospital")->
                 subject($subject);
+                $message->attach($path,[]);
             });
 		}
+
+		$data['url']=$url;
+		return view('pages.success',$data);
 	}
 
 }
