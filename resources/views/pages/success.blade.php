@@ -66,7 +66,8 @@
                     <p style="font-size:1.2em">You shall receive your invitation card by the first week of January. </p>
                     <p style="font-size:1.2em">Your payment Id is <b>{{$id}}</b>. Please note the id for any future communications.</b></p>
                     <p style="font-size:1.2em">You can download the invloce <a style="color:#fff;text-decoration:underline" href="{{$url}}">here</a>. Also we have mailed you the invoice</p>
-                    <p></p>
+                    <p><br></p>
+
 
                 </div>
             </div>

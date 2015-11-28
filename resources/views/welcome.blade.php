@@ -291,7 +291,8 @@
 						<div id="contact-section">
 							<h3>Send a message</h3>
 					    	<div class="status alert alert-success" style="display: none"></div>
-					    	<form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
+					    	<form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="{{route('contact')}}">
+					    		<input type="hidden" name="_token" value="{{csrf_token()}}">
 					            <div class="form-group">
 					                <input type="text" name="name" class="form-control" required="required" placeholder="Name">
 					            </div>

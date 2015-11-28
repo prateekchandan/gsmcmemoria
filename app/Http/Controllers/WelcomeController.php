@@ -145,4 +145,28 @@ class WelcomeController extends Controller {
 		return view('pages.success',$data);
 	}
 
+
+	public function contact()
+	{
+		$name = Input::get('name');
+		$email = Input::get('email');
+		$message = Input::get('message');
+		$subject = "New Contact Us mail from ".$name;
+		$env = env('APP_ENV','local');
+		if($env != 'local'){
+			Mail::send('emails.contact', array('name'=>$name,'email'=>$email,'message'=>$message),   function($message) use ($name,$email,$subject){
+                $message->to("aavishkaarfest@gmail.com","Kem Hospital")->
+                replyTo($email,$name )->
+                subject($subject);
+            });
+		}else{
+			Mail::pretend('emails.contact', array('name'=>$name,'email'=>$email,'message'=>$message),   function($message) use ($name,$email,$subject){
+                $message->to("aavishkaarfest@gmail.com","Kem Hospital")->
+                replyTo($email,$name )->
+                subject($subject);
+            });
+		}
+
+		return 'Thank you for contact us. As early as possible  we will contact you ';
+	}
 }

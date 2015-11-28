@@ -44,11 +44,21 @@ jQuery(function($) {'use strict',
 
 	// Contact form validation
 	var form = $('.contact-form');
-	form.submit(function () {'use strict',
-		$this = $(this);
-		$.post($(this).attr('action'), function(data) {
-			$this.prev().text(data.message).fadeIn().delay(3000).fadeOut();
-		},'json');
+	form.submit(function () {
+
+		jQuery.ajax({
+			url:$(this).attr('action'),
+			type:"POST",
+			data:$(this).serialize(),
+			success:function(data){
+				console.log(data);
+				$('.contact-form').prev().text(data).fadeIn().delay(3000).fadeOut();
+			},
+			error:function(data){
+				console.log(data);
+				$('.contact-form').prev().text("Error").fadeIn().delay(3000).fadeOut();
+			}
+		})
 		return false;
 	});
 
