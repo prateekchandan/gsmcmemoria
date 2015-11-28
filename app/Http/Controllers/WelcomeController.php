@@ -154,13 +154,13 @@ class WelcomeController extends Controller {
 		$subject = "New Contact Us mail from ".$name;
 		$env = env('APP_ENV','local');
 		if($env != 'local'){
-			Mail::send('emails.contact', array('name'=>$name,'email'=>$email,'message'=>$msg),   function($message) use ($name,$email,$subject){
+			Mail::send('emails.contact', array('name'=>$name,'email'=>$email,'msg'=>$msg),   function($message) use ($name,$email,$subject){
                 $message->to("aavishkaarfest@gmail.com","Kem Hospital")->
                 replyTo($email,$name )->
                 subject($subject);
             });
 		}else{
-			Mail::pretend('emails.contact', array('name'=>$name,'email'=>$email,'message'=>$msg),   function($message) use ($name,$email,$subject){
+			Mail::pretend('emails.contact', array('name'=>$name,'email'=>$email,'msg'=>$msg),   function($message) use ($name,$email,$subject){
                 $message->to("aavishkaarfest@gmail.com","Kem Hospital")->
                 replyTo($email,$name )->
                 subject($subject);

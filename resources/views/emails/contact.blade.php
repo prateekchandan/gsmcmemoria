@@ -3,4 +3,4 @@ Name : {{$name}}<br>
 Email : {{$email}}<br>
 <br>
 Message : <br>
-{{$message}}
+{{$msg}}
