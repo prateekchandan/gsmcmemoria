@@ -319,7 +319,7 @@ $total+=2000;
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <script
                             src="https://checkout.razorpay.com/v1/checkout.js"
-                            data-key="rzp_test_C4BqVMbrkIGbL7"
+                            data-key="{{env('KEY', 'rzp_test_C4BqVMbrkIGbL7')}}"
                             data-amount="{{$total*100}}"
                             data-name="Seth GS Medical College Gymkhana"
                             data-description="Registration Payment"

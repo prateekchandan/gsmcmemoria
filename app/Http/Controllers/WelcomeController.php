@@ -102,7 +102,7 @@ class WelcomeController extends Controller {
 			return redirect()->route('confirm');
 		}
 		$id = Input::get("razorpay_payment_id");
-		$api = new Api("rzp_test_C4BqVMbrkIGbL7","uzxtYS7Hy2XlBqIxwjKvzKbT");
+		$api = new Api(env('KEY', 'rzp_test_C4BqVMbrkIGbL7'),env('SECRET', "uzxtYS7Hy2XlBqIxwjKvzKbT"));
 		$payment = $api->payment->fetch($id); // Returns a particular payment
 		$data = session('data',json_decode('{"error":1,"pg_dept":"","spouse_pg_dept":"","name": "","mobile": "","landline": "","email": "","r_address": "","r_state": "","r_country": "","r_zip": "", "h_address": "","h_state": "","h_country": "","h_zip": "","ug_college": "","ug_year": "","pg_college": "","pg_year": "","spouse_coming": "true","spouse_alumni":"false","spouse_name": "","spouse_h_address": "","spouse_h_state": "","spouse_h_country": "","spouse_h_zip": "","spouse_ug_college": "","spouse_ug_year": "","spouse_pg_college": "","spouse_pg_year": ""}',true));
 		$data['id']=$payment->id;;
