@@ -137,7 +137,7 @@
 	
         </style>
         <div class="main">
-		  <img src="{{asset('images/dean.png')}}" class="screenshot" alt="Example" />
+		  <img src="{{asset('images/dean.jpg')}}" class="screenshot" alt="Example" />
 		  <div class="details">
 		    <div class="about">
 		      <h2>From the Dean's Desk</h2>
