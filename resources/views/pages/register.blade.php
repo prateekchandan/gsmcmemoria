@@ -76,6 +76,9 @@
                     <p>
                         We look forward to your presence with warm hearts and open arms.
                     </p>
+                    <p>
+                        We are also accepting International Payments
+                    </p>
                 </div>
             </div>
         </div>
@@ -303,9 +306,9 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                 	<div class="form-group">
-	                    <label class="col-sm-2 control-label">Donation Amount (in Rs)</label>
-	                    <div class="col-sm-10">
-	                    <input type="number" required min="0" class="form-control" name="donation" id="donation">
+	                    <label class="col-sm-3 control-label">Donation Amount (in Rs)</label>
+	                    <div class="col-sm-9">
+	                    <input type="number" value="0" required min="0" class="form-control" name="donation" id="donation">
 	                    </div>
 	                </div>
 

@@ -59,7 +59,7 @@
 						<h2 class="heading" style="margin-bottom:0px">OUR TEAM</h2>
 						<p style="font-size:1.1em;margin-bottom:20px">Teamwork is the ability to work together toward a common vision. The ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results.
 						</p>
-						<p style="font-size:1.1em;margin-bottom:40px">Out team comprises of following people</p>
+						<p style="font-size:1.1em;margin-bottom:40px">Our team comprises of following people</p>
 					</div>
 				</div>
 			</div>	
