@@ -196,19 +196,19 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">College</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="pg_college" value="{{$data['pg_college']}}" required placeholder="Enter College Name">
+                            <input type="text" class="form-control" name="pg_college" value="{{$data['pg_college']}}" placeholder="Enter College Name">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Batch (Year of Admission)</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" name="pg_year" value="{{$data['pg_year']}}" required placeholder="YYYY">
+                            <input type="number" class="form-control" name="pg_year" value="{{$data['pg_year']}}" placeholder="YYYY">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Department</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="pg_dept" value="{{$data['pg_dept']}}" required placeholder="Enter Department Name">
+                            <input type="text" class="form-control" name="pg_dept" value="{{$data['pg_dept']}}" placeholder="Enter Department Name">
                         </div>
                     </div>
                     <br>
@@ -281,19 +281,19 @@
 	                        <div class="form-group">
 	                            <label class="col-sm-2 control-label">College</label>
 	                            <div class="col-sm-10">
-	                                <input type="text" class="form-control s_coming s_alumni" name="spouse_pg_college" value="{{$data['spouse_pg_college']}}" placeholder="Enter College Name">
+	                                <input type="text" class="form-control s_pg s_coming s_alumni" name="spouse_pg_college" value="{{$data['spouse_pg_college']}}" placeholder="Enter College Name">
 	                            </div>
 	                        </div>
 	                        <div class="form-group">
 	                            <label class="col-sm-2 control-label">Batch (Year of Admission)</label>
 	                            <div class="col-sm-10">
-	                                <input type="number" class="form-control s_coming s_alumni" name="spouse_pg_year" value="{{$data['spouse_pg_year']}}" placeholder="YYYY">
+	                                <input type="number" class="form-control s_pg s_coming s_alumni" name="spouse_pg_year" value="{{$data['spouse_pg_year']}}" placeholder="YYYY">
 	                            </div>
 	                        </div>
 	                        <div class="form-group">
 	                            <label class="col-sm-2 control-label">Department</label>
 	                            <div class="col-sm-10">
-	                                <input type="text" class="form-control s_coming s_alumni" name="spouse_pg_dept" value="{{$data['spouse_pg_dept']}}" placeholder="Enter Department Name">
+	                                <input type="text" class="form-control s_pg s_coming s_alumni" name="spouse_pg_dept" value="{{$data['spouse_pg_dept']}}" placeholder="Enter Department Name">
 	                            </div>
 	                        </div>
 	                    </div>
@@ -340,7 +340,8 @@
 
 		if($(this).is(':checked')){
 			$('.s_coming').attr('required','required');
-			$('.s_alumni').removeAttr('required');
+            $('.s_alumni').removeAttr('required');
+			$('.s_pg').removeAttr('required');
 			amount = 5000;
 		}else{
 			$('.s_coming').removeAttr('required');
@@ -369,6 +370,7 @@
 		if($(this).is(':checked')){
 			$('.s_coming').attr('required','required');
 			$('.s_alumni').attr('required','required');
+            $('.s_pg').removeAttr('required');
 		} else{
 			$('.s_alumni').removeAttr('required');
 		}
