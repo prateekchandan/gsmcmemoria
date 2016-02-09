@@ -30,7 +30,7 @@
 		                    <li><a class="no-scroll" href="{{route('home')}}/#about">About</a></li>                     
 		                    <li><a href="{{route('home')}}/#event" class="no-scroll ">Schedule</a></li>
 		                    <li><a href="{{route('register')}}" class="no-scroll ">REGISTER</a></li>
-		                    <li><a href="{{route('team')}}" class="no-scroll ">Team</a></li>
+		                    <li><a href="{{route('team')}}" class="no-scroll ">Merchandise</a></li>
 		                    <li><a href="{{route('home')}}/#contact" class="no-scroll ">Contact</a></li>       
 		                </ul>
 		            </div>

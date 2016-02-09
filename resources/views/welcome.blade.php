@@ -30,7 +30,7 @@
 		                    <li class="scroll"><a href="#about">About</a></li>                     
 		                    <li class="scroll"><a href="#event">Schedule</a></li>
 		                    <li><a class="no-scroll" href="{{route('register')}}">REGISTER</a></li>
-		                    <li><a class="no-scroll" href="{{route('team')}}">Team</a></li>
+		                    <li><a class="no-scroll" href="{{route('team')}}">Merchandise</a></li>
 		                    <li class="scroll"><a href="#contact">Contact</a></li>       
 		                </ul>
 		            </div>
@@ -102,6 +102,15 @@
 	<section id="about">
 		<div class="col-md-3 hidden-xs">				
 			<img class="img-responsive" src="{{asset('images/guitar2.jpg')}}" alt="guitar" style="margin-top:100px">
+			<br>
+			<br>
+			<br>
+			<p class="text-center">
+			<b>Co-Sponsered By:</b>
+			<br>
+			<a href="http://www.licindia.in"><img src="{{asset('images/lic.jpg')}}" style="height:100px"></a>
+				
+			</p>
 		</div>
 		<div class="about-content col-md-9">					
 					<h2>About Memoria</h2>

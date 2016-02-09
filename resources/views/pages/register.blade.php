@@ -39,7 +39,7 @@
                         </li>
                         <li class="scroll active"><a href="{{route('register')}}">REGISTER</a>
                         </li>
-                        <li><a href="{{route('team')}}" class="no-scroll ">Team</a>
+                        <li><a href="{{route('team')}}" class="no-scroll ">Merchandise</a>
                         </li>
                         <li><a href="{{route('home')}}/#contact" class="no-scroll ">Contact</a>
                         </li>

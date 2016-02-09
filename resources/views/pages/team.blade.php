@@ -30,7 +30,7 @@
 		                    <li><a class="no-scroll" href="{{route('home')}}/#about">About</a></li>                     
 		                    <li><a href="{{route('home')}}/#event" class="no-scroll ">Schedule</a></li>
 		                    <li><a href="{{route('register')}}" class="no-scroll ">REGISTER</a></li>
-		                    <li  class="scroll active"><a href="{{route('team')}}" class="no-scroll ">Team</a></li>
+		                    <li  class="scroll active"><a href="{{route('team')}}" class="no-scroll ">Merchandise</a></li>
 		                    <li><a href="{{route('home')}}/#contact" class="no-scroll ">Contact</a></li>       
 		                </ul>
 		            </div>
@@ -55,13 +55,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12 col-md-12">
-					<div id="event-carousel" class="carousel slide" data-interval="false">
-						<h2 class="heading" style="margin-bottom:0px">OUR TEAM</h2>
-						<p style="font-size:1.1em;margin-bottom:20px">Teamwork is the ability to work together toward a common vision. The ability to direct individual accomplishments toward organizational objectives. It is the fuel that allows common people to attain uncommon results.
-						</p>
-						{{-- <p style="font-size:1.1em;margin-bottom:40px">Our team comprises of following people</p> --}}
-						<p style="font-size:1.1em;margin-bottom:40px">To be updated soon..</p> 
-					</div>
+					<img src="{{asset('images/merchandise.jpg')}}" style="width:100%">
 				</div>
 			</div>	
 			{{-- 

@@ -17,7 +17,7 @@ Route::get('confirm', array('as'=>'confirm','uses'=>'WelcomeController@register_
 Route::post('result', array('as'=>'result','uses'=>'WelcomeController@register_result'));
 Route::post('contact', array('as'=>'contact','uses'=>'WelcomeController@contact'));
 Route::post('register', array('as'=>'register','uses'=>'WelcomeController@register'));
-Route::get('team', array('as'=>'team','uses'=>'WelcomeController@show_team'));
+Route::get('merchandise', array('as'=>'team','uses'=>'WelcomeController@show_team'));
 Route::get('terms', array('as'=>'tnc','uses'=>'WelcomeController@tnc'));
 Route::get('privacy', array('as'=>'privacypolicy','uses'=>'WelcomeController@privacypolicy'));
 
