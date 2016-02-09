@@ -106,7 +106,7 @@
 			<br>
 			<br>
 			<p class="text-center">
-			<b>Co-Sponsered By:</b>
+			<b>Co-Sponsored By:</b>
 			<br>
 			<a href="http://www.licindia.in"><img src="{{asset('images/lic.jpg')}}" style="height:100px"></a>
 				
